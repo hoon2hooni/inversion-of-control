@@ -8,3 +8,11 @@ export default function filter(array, filterFn) {
   }
   return newArray;
 }
+
+export function filterNullAndUndefined(array) {
+  return filter(array, (el) => el !== null && el !== undefined);
+}
+
+export function filterNullAndUndefinedAndEmptyString(array) {
+  return filter(array, (el) => el !== null && el !== undefined && el !== "");
+}
