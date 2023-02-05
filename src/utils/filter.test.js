@@ -5,4 +5,9 @@ describe("filter", () => {
     const result = filter([1, 2, 3, null, undefined]);
     expect(result).toEqual([1, 2, 3]);
   });
+
+  it("should return an array", () => {
+    const result = filter([1, 2, 3, null, undefined, ''],{filterEmptyString: true});
+    expect(result).toEqual([1, 2, 3]);
+  });
 });
